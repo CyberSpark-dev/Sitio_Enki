@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* =========================================
+   PALETA DE COLORES ENKI.COM (TECNO-ESTÉTICA)
+========================================= */
+:root {
+    --bg-dark: #0f172a;
+    --primary-blue: #3b82f6;
+    --neon-blue: #00e5ff;
+    --purple: #8b5cf6;
+    --pink-accent: #ec4899;
+    --light-text: #f8fafc;
+    --dark-text: #1e293b;
+    --light-bg: #f1f5f9; /* Un tono gris azulado muy sutil */
+    --glass-bg: rgba(15, 23, 42, 0.7);
+}
+
+/* =========================================
+   ESTILOS GENERALES Y SCROLLBAR CUSTOM
+========================================= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--light-bg);
+}
+
+/* Scrollbar estilo Tech */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-blue);
+}
+
+/* Textos con Gradiente (Efecto muy moderno) */
+.text-gradient {
+    background: linear-gradient(to right, var(--neon-blue), var(--purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+.text-primary { color: var(--purple) !important; }
+
+/* =========================================
+   NAVEGACIÓN (GLASSMORPHISM)
+========================================= */
+.bg-primary, .navbar {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(139, 92, 246, 0.8)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand span { color: var(--neon-blue) !important; }
+.navbar-nav .nav-link { color: var(--light-text) !important; transition: all 0.3s ease; }
+
+.navbar-nav .nav-link:hover {
+    color: var(--neon-blue) !important;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+#menu li > a { font-size: 18px; font-weight: 600; }
+
+/* =========================================
+   BOTONES CON ESTILO TECNOLÓGICO (NEON GLOW)
+========================================= */
+.btn-primary {
+    background-color: var(--purple);
+    border-color: var(--purple);
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+    background-color: var(--pink-accent);
+    border-color: var(--pink-accent);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6); /* Brillo intenso al hover */
+}
+
+.btn-outline-primary {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Botón flotante volver arriba */
+#btn-top {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--purple), var(--pink-accent));
+    color: #fff !important;
+    font-size: 1.65rem;
+    padding: 0;
+    border-radius: 50%;
+    z-index: 1050;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+#btn-top i {
+    line-height: 1;
+    display: block;
+}
+
+#btn-top:hover {
+    background: linear-gradient(135deg, var(--neon-blue), var(--primary-blue));
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 229, 255, 0.45);
+    color: #fff !important;
+}
+
+/* Landing: franja temática + carrusel compacto para dejar visible el texto inferior */
+.hero-strip {
+    background: linear-gradient(90deg, var(--bg-dark) 0%, rgba(139, 92, 246, 0.92) 50%, var(--bg-dark) 100%);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.35);
+}
+
+.hero-strip .hero-title {
+    font-size: clamp(1.25rem, 3vw, 1.85rem);
+    letter-spacing: 0.02em;
+}
+
+.hero-strip .hero-sub {
+    font-size: 0.95rem;
+    color: rgba(248, 250, 252, 0.88) !important;
+}
+
+.hero-carousel-wrap {
+    max-height: min(40vh, 400px);
+    background: var(--bg-dark);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.hero-carousel-wrap .carousel-inner {
+    max-height: min(40vh, 400px);
+}
+
+.hero-carousel-wrap .carousel-item img {
+    width: 100%;
+    height: min(40vh, 400px);
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-carousel-wrap .carousel-control-prev,
+.hero-carousel-wrap .carousel-control-next {
+    width: 10%;
+}
+
+#intro {
+    padding-top: 2rem !important;
+    margin-top: 1rem !important;
+}
+
+.session-badge-pulse {
+    animation: pulse-soft 2s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45); }
+    50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+.compra-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(139, 92, 246, 0.12);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* =========================================
+   IMÁGENES Y SERVICIOS (HOVER IMPECABLE)
+========================================= */
+#img-peq img, #img-peq2 img {
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+
+/* Nuevo hover para servicios: Levita y brilla en lugar de escalar gigante */
+.icono-wrap:hover img {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 229, 255, 0.3);
+    border: 2px solid var(--neon-blue);
+}
+
+/* Efecto suave para imagen grande de comunidad */
+#img-gde img {
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#img-gde img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+}
+
+/* =========================================
+   SECCIÓN SOBRE NOSOTROS Y MAPA
+========================================= */
+.mapa {
+    background: url(./Images/LeonGto_ubicacion.png) center/cover;
+    width: 90%;
+    height: 300px;
+    margin-top: 150px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.mapa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.2);
+}
+
+#local {
+    background-color: var(--light-bg);
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-local {
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 150px;
+}
+
+#numeros-local div {
+    padding: 0 20px 0 0;
+    height: 48px;
+    transition: transform 0.3s;
+}
+#numeros-local div:hover {
+    transform: scale(1.05); /* Pequeño resalte a los números */
+}
+
+#numeros-local div:not(:last-child) {
+    border-right: 2px solid rgba(30, 41, 59, 0.2);
+}
+
+#numeros-local div:not(:first-child) {
+    padding-left: 20px;
+}
+
+/* =========================================
+   SECCIÓN CONTACTO Y FORMULARIO
+========================================= */
+#bg-contacto {
+    position: relative;
+    top: -130px;
+}
+
+#seccion-contacto {
+    background-color: var(--bg-dark);
+    min-height: 500px;
+    position: relative;
+}
+
+.operador {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.operador img {
+    animation: flotar 4s ease-in-out infinite;
+    border: 3px solid var(--purple);
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); }
+    50% { transform: translateY(-15px); box-shadow: 0 15px 25px rgba(139, 92, 246, 0.2); }
+    100% { transform: translateY(0px); box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); }
+}
+
+#contenedor-formulario {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    max-width: 500px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid var(--neon-blue);
+    transition: transform 0.3s;
+}
+
+#contenedor-formulario:hover {
+    transform: translate(-50%, -52%); /* Efecto sutil al interactuar con el formulario */
+}
+
+/* Entradas de formulario modernas */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+.form-control:focus {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 229, 255, 0.25);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    margin-top: 100px;
+    background: var(--bg-dark);
+    min-height: 120px;
+    border-top: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+footer p { color: var(--light-text); }
+
+#iconos i {
+    font-size: 28px;
+    padding: 0 12px;
+    color: var(--neon-blue);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+#iconos i:hover {
+    color: var(--pink-accent);
+    transform: translateY(-5px) scale(1.2);
+    text-shadow: 0 5px 15px rgba(236, 72, 153, 0.5);
+}
+
+/* =========================================
+   TIENDA Y SERVICIOS (CARDS)
+========================================= */
+.card-producto {
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.card-producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+    border-color: var(--purple);
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE)
+========================================= */
+@media (max-width: 1200px) {
+    #local { padding-top: 30px; }
+    .wrapper-local { width: 90%; margin: auto; padding-top: 50px; }
+}
+
+@media (max-width: 768px) {
+    #intro, #comunidad { width: 90% !important; }
+    #comunidad p { display: none; }
+    #bg-contacto { top: -80px; }
+    #contenedor-formulario { position: relative; top: 0; transform: none; margin: 0 auto 50px auto; }
+    .hero-carousel-wrap,
+    .hero-carousel-wrap .carousel-inner,
+    .hero-carousel-wrap .carousel-item img {
+        max-height: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .icono-wrap { flex-direction: column; text-align: center; }
+    .icono-wrap img { margin: 0 auto 15px auto; }
+}

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Enki.com - Tu Copiloto Digital</title>
+</head>
+
+<body>
+    <a href="#" id="btn-top" title="Volver arriba" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <header class="container-fluid bg-primary d-flex flex-column align-items-center py-2">
+        <h2 class="hero-title text-light fw-bold mb-1">Ciencia · Código · Comunidad</h2>
+        <p class="hero-sub text-light mb-0">Tu copiloto técnico: aprende, comparte y conecta con otros geeks</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark p-3 sticky-top" id="menu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><span class="fs-4 fw-bold">Enki.com</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comunidad">Comunidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda/Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-contacto">Contacto</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center" id="nav-auth">
+                    <a href="login.html" class="btn btn-outline-info me-2 fw-bold">Log In</a>
+                    <a href="signin.html" class="btn btn-primary fw-bold">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleControls" class="carousel slide shadow-sm hero-carousel-wrap" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="./Images/Comunidad1.png" class="d-block w-100" alt="Tecnología y mundo digital">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./Images/Ingenieros_Reparando.png" class="d-block w-100" alt="Robótica e innovación">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./Images/Oxford.png" class="d-block w-100" alt="Futuro digital">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./Images/Videollamada.png" class="d-block w-100" alt="Hacking ético y seguridad">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./Images/gadgets.png" class="d-block w-100" alt="Formación y excelencia">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section class="w-75 mx-auto text-center pt-5 mt-4" id="intro">
+        <h1 class="p-3 fs-2 border-top border-3 fw-bold">¿Tienes Dudas? Amantes de la tecnología y todas sus ramas te las resolverán, Encuentra a tu Copiloto Técnico o...
+        <span class="text-primary">Sé Tú el copiloto de alguien más</span></h1>
+        <p class="fs-5 text-muted mt-3">Conoce personas de todo el mundo con tus mismas aficiones y ve más allá.</p>
+    </section>
+
+    <section class="container-fluid">
+        <div id="img-peq" class="row w-75 mx-auto my-5 servicio fila">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+                <img src="./Images/hacker_1.jpeg" alt="Inovaciones" width="180" height="160" class="shadow-sm">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1 fw-bold">Hacking</h3>
+                    <p class="px-4 text-muted">Conoce los trucos más nuevos para descifrar los misterios del mundo</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+                <img src="./Images/Comunidad_Logica-Matematica.png" alt="Inovaciones" width="180" height="160" class="shadow-sm">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1 fw-bold">Cursos</h3>
+                    <p class="px-4 text-muted">Descubre nuestros cursos de programación y haz realidad tus ideas</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="img-peq2" class="row w-75 mx-auto my-5 servicio fila">
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+                <img src="./Images/RobotDronCompleto.jpeg" alt="Inovaciones" width="180" height="160" class="shadow-sm">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1 fw-bold">Desarrollo</h3>
+                    <p class="px-4 text-muted">Muestra tus proyectos y exhibe tus ideas más geniales</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+                <img src="./Images/libros.png" alt="Inovaciones" width="180" height="160" class="shadow-sm">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1 fw-bold">Documentación</h3>
+                    <p class="px-4 text-muted">Te proporcionamos documentos de apoyo para realizar el proyecto de tus sueños </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-75 m-auto text-center" id="comunidad">
+            <h1 class="mb-4 fs-2 fw-bold">Comunidad "Pequeñas Ideas que<span class="text-primary"> Cambian al Mundo"</span></h1>
+            <p class="fs-5 text-muted">Buscamos talento en todo el mundo con ganas de retos e innovaciones. Si sientes esa pasión tecnológica sé parte de nuestra comunidad.</p>
+        </div>
+        <div id="img-gde" class="mt-5 text-center px-3">
+            <img class="img-fluid rounded shadow" src="./Images/Simulacion_Video.png" alt="comunidad">
+        </div>
+
+        <div id="local" class="border-top border-3 mt-5">
+            <div class="mapa rounded shadow-sm"></div>
+            <div>
+                <div class="wrapper-local"> 
+                    <h2 class="fw-bold">Sobre Nosotros, Ubicado en León Gto</h2>
+                    <h2 class="text-primary mb-4 fw-bold" id="typewriter"></h2>
+                    <p class="fs-6 text-muted"> Estar en el Bajío, y especialmente en León, Guanajuato, es una ventaja real para quienes viven y respiran tecnología. La región se ha convertido en un semillero de talento nerd: estudiantes de informática, programadores, técnicos y entusiastas que quieren aprender, compartir y crecer en el mundo digital.
+                        <br><br>
+                    En Enki.com creemos que el conocimiento técnico cobra más valor cuando se comparte. A través de tutorías comunitarias, conectamos a personas con habilidades en tecnología informática con quienes buscan aprender, mejorar o resolver problemas reales.
+                        <br><br>
+                        Invitamos a todos los curiosos, geeks y futuros profesionales a sumarse a esta comunidad.</p>
+                
+                    <section class="d-flex justify-content-start mt-4" id="numeros-local">
+                        <div>
+                            <p class="text-primary fs-5 fw-bold">Estado</p>
+                            <p class="text-muted">Guanajuato</p>
+                        </div>
+                        <div>
+                            <p class="text-primary fs-5 fw-bold">100%</p>
+                            <p class="text-muted">Didáctico</p>
+                        </div>
+                        <div>
+                            <p class="text-primary fs-5 fw-bold">Seguidores</p>
+                            <p class="text-muted">1,000+</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion-contacto" class="border-bottom border-secondary border-2">
+        <div id="bg-contacto"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0f172a" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      
+        <div class="container" id="contenedor-formulario">
+            <div class="titulo-formulario text-center mb-4">
+                <div class="operador mb-3"><img src="./Images/operadora_mor.jpeg" alt="contacto" class="img-fluid rounded-circle shadow-sm" style="width: 100px; height: 100px; object-fit: cover; margin: 0 auto;"></div>
+                <h2 class="text-dark fw-bold">Contacto</h2>
+                <p class="fs-6 text-muted">Envíanos tus dudas y sugerencias</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="mb-4">
+                    <input type="email" class="form-control p-3" id="email" placeholder="nombre@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control p-3" id="nombre" placeholder="Tu Nombre Completo" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control p-3" id="tel" placeholder="000-000-0000" required>
+                </div>
+                <div class="mb-4">
+                    <textarea class="form-control p-3" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary w-100 fs-5 py-2 fw-bold shadow">Enviar Mensaje</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="w-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div id="iconos" class="mb-3">
+            <a href="https://www.facebook.com/enki.com" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-threads"></i></a>
+        </div>
+        <p class="fs-6 px-3 m-0 text-muted">Enki.com &copy; Todos los Derechos Reservados 2026</p>
+    </footer>
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="main2.js"></script>
+
+    <script>
+        // --- 1. LÓGICA PARA MOSTRAR USUARIO LOGUEADO ---
+        const user = localStorage.getItem('usuarioLogueado');
+        const nick = localStorage.getItem('nickUsuario');
+        const rol = localStorage.getItem('rolUsuario');
+        const navAuth = document.getElementById('nav-auth');
+
+        function escHtml(t) {
+            const d = document.createElement('div');
+            d.textContent = t == null ? '' : String(t);
+            return d.innerHTML;
+        }
+
+        if (user) {
+            const redirectUrl = rol === 'admin' ? 'admin.html' : 'dashboard.html';
+            const btnText = rol === 'admin' ? 'Panel Admin' : 'Mi Hub';
+            const rolEtiqueta = rol === 'admin' ? '<span class="badge bg-warning text-dark ms-1">Admin</span>' : '';
+            const nickHtml = nick ? ` <small class="text-white-50">@${escHtml(nick)}</small>` : '';
+
+            navAuth.innerHTML = `
+                <span class="badge bg-success session-badge-pulse me-2 align-self-center"><i class="bi bi-circle-fill" style="font-size:0.5rem;vertical-align:middle;"></i> Sesión activa</span>
+                <span class="text-light me-2 small align-self-center text-wrap"><i class="bi bi-person-circle text-info"></i> <strong>${escHtml(user)}</strong>${nickHtml} ${rolEtiqueta}</span>
+                <a href="${redirectUrl}" class="btn btn-primary btn-sm me-2 fw-bold">${btnText}</a>
+                <button type="button" onclick="cerrarSesion()" class="btn btn-outline-danger btn-sm fw-bold">Salir</button>
+            `;
+        }
+
+        function cerrarSesion() {
+            localStorage.clear();
+            window.location.reload();
+        }
+
+        // --- 2. LÓGICA DEL FORMULARIO DE CONTACTO ---
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault(); 
+
+                const datos = {
+                    email: document.getElementById('email').value,
+                    nombre: document.getElementById('nombre').value,
+                    telefono: document.getElementById('tel').value,
+                    mensaje: document.getElementById('mensaje').value 
+                };
+
+                try {
+                    const res = await fetch('/api/contacto', {
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify(datos)
+                    });
+
+                    if(res.ok) {
+                        alert('¡Mensaje enviado con éxito!\nNos pondremos en contacto pronto.');
+                        contactForm.reset();
+                    } else {
+                        alert('Error al enviar mensaje.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('Error de conexión con el servidor.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

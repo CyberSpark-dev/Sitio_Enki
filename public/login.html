@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Enki.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #1b2a4e; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: 'Montserrat', sans-serif; }
+        .card { width: 100%; max-width: 400px; border: none; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body>
+    <div class="card p-4">
+        <div class="text-center mb-4">
+            <h3 class="text-primary fw-bold">{ ENKI }</h3>
+            <h4>Bienvenido de vuelta</h4>
+        </div>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Entrar</button>
+            <div id="mensaje" class="text-center"></div>
+        </form>
+
+        <a href="index.html" class="btn btn-outline-secondary w-100">Volver al Inicio</a>
+
+        <div class="text-center mt-3">
+            <small>¿No tienes cuenta? <a href="signin.html">Regístrate aquí</a></small>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const usuario = document.getElementById('usuario').value;
+            const password = document.getElementById('password').value;
+    
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ usuario, password })
+            });
+    
+            const data = await response.json();
+            const mensajeDiv = document.getElementById('mensaje');
+    
+            if(response.status === 200) {
+                mensajeDiv.innerHTML = `<span class="text-success fw-bold">¡Hola, ${data.nombre}! (@${data.nick}) Accediendo...</span>`;
+                
+                localStorage.setItem('usuarioLogueado', data.nombre);
+                localStorage.setItem('nickUsuario', data.nick);
+                localStorage.setItem('rolUsuario', data.rol);
+                
+                // LÓGICA DE REDIRECCIÓN CORREGIDA
+                setTimeout(() => {
+                    if (data.rol === 'admin') {
+                        window.location.href = 'admin.html'; // El admin va a su panel de gestión
+                    } else {
+                        window.location.href = 'dashboard.html'; // El usuario normal va al foro/recursos
+                    }
+                }, 1500); 
+            }
+            else {
+                mensajeDiv.innerHTML = `<span class="text-danger fw-bold">${data.msg}</span>`;
+            }
+        });
+    </script>
+</body>
+</html>
